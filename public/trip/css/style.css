@@ -1,0 +1,41 @@
+/*.image-container{
+	height: 200px;
+	width: 200px;
+	float: right;
+	box-shadow: 5px 5px 5px 5px #bdbdb9;
+	margin-right: 20px;
+}
+
+.image-box{
+	height: 150px;
+    width: 150px;
+    background-size: cover;
+    margin: 25px;
+    border-radius: 50%;
+}
+
+div.current-avatar{
+	float: right
+}
+
+div.current-avatar img{
+	height: 100px;
+	width: 100px;
+}
+
+.modal-body p {
+  white-space: pre-wrap;
+}
+
+
+span.counter-custom{
+	border-radius: 50%;
+    border: 1px solid black;
+    padding: 0 5px 0 5px;
+    background: #d1757e;
+}
+*/
+.help-block.error-help-block{
+  font-size: 14px;
+  color: red;
+}
