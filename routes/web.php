@@ -41,6 +41,7 @@ Route::group(['prefix'=>'admin/','namespace'=>'App\\Http\\Controllers\\Admin\\',
     Route::get('groups',['uses'=>'GroupController@index','as'=>'groups']);
     Route::get('group/{id}',['uses'=>'GroupController@show','as'=>'group']);
     Route::get('groups/{id}',['uses'=>'GroupController@destroy','as'=>'dgroup']);
+    Route::get('export/{id}',['uses'=>'GroupController@export','as'=>'export']);
 });
 
 

@@ -5,7 +5,10 @@ Group Details
 
 @section('content')
     <div class="card-body mb-5">
-        <h4>{{$group->name}}</h4>
+        <div class="d-flex">
+            <div class=" mr-auto p-2"><h4>{{$group->name}}</h4></div>
+            <div class="p-2"><a href="{{route('admin.export', $group->id)}}" class="btn btn-dark">Export</a></div>
+        </div>
         <table class="table" style="display: block;
         overflow-x: auto;
         white-space: nowrap;">

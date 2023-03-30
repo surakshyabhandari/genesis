@@ -9,7 +9,6 @@
             @foreach ($users as $key => $user)
             <tr>
                 <td>{{$user->first_name.' '.$user->middle_name.' '.$user->last_name}}</td>
-                {{-- <td>{!! Form::text('signature[]',null,['class'=>'form-control','id'=>'signature']) !!}</td> --}}
                 <td>
                     {!! Form::file('signature[]',['class'=>'form-control','id'=>'signature','wire:model'=>'signatures']) !!}
                     @if($signatures  )

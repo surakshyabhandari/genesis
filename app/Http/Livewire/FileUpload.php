@@ -8,6 +8,8 @@ use App\Models\Group;
 use App\Providers\AppServiceProviders;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
+use Mail;
+use App\Mail\CustomerDetail;
 
 use Livewire\Component;
 
@@ -44,8 +46,12 @@ class FileUpload extends Component
 
         }
 
+        //updating the status in group table after the signatures has been added
         $groups = Group::where('slug',$this->group)->first();
         $groups->update(['status'=>1]);
+
+        //sending mail
+        Mail::send(new CustomerDetail($groups));
 
         session()->flash('status','Trip Booked Successfully');
         return redirect()->route('index');

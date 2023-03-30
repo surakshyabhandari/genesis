@@ -15,7 +15,6 @@ class CustomerController extends Controller
     public function __construct(CustomerInterface $customer)
     {
         $this->customer = $customer;
-        // dd($customer);
     }
 
     public function index()
@@ -35,10 +34,9 @@ class CustomerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(AddFormValidation $request, $group)
+    public function store()
     {
-        // $this->customer->storeData($request, $group);
-        // return redirect()->route('group.create',$group);
+       //
     }
 
     public function signature($group)
@@ -48,13 +46,6 @@ class CustomerController extends Controller
         return view('trip.signatureform', compact('group','users'));
     }
 
-    public function addSignature(AddFormValidation $request, $group)
-    {
-
-        $this->customer->updateData($request, $group);
-        session()->flash('status','Trip Booked Successfully');
-        return redirect()->route('index');
-    }
 
     /**
      * Display the specified resource.

@@ -23,9 +23,7 @@ class CloneForm extends Component
 
     public function mount(CustomerInterface $customer)
     {
-        // dd(count($this->inputs));
         $this->customer = $customer;
-        // dd($customer);
     }
 
     public function render()
